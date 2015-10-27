@@ -4,7 +4,7 @@ var express = require('express')
   , mongoose = require('mongoose')
   , jwt = require('jwt-simple');
 
-  var db = 'localhost';//coloque a url do db aqui
+  var db = 'mongodb://goreport:goappes@ds045604.mongolab.com:45604/heroku_cb8cxw47';//coloque a url do db aqui
   
   app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
