@@ -8,15 +8,20 @@ var express = require('express')
   
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
-  var port = process.env.PORT || 8080;
+  var port = process.env.PORT || 8081;
   var router = express.Router();
-  app.use('/api', router);
+  app.use('/', router);
 
   /*Aqui criaremos as rotas*/
-  var rotas = require('./routes')
+  var rotas = require('./routes');
+
+  router.route('/testeApi')
+    .get(rotas.testeApi);
+
   router.route('/usuarios')
     .get(require('./validarJWT'),rotas.getUsuarios)
     .post(rotas.postUsuarios);
+  
   router.route('/login')
     .post(rotas.login);
  
