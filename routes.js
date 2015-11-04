@@ -1,5 +1,6 @@
 module.exports = {
 
+testeApi: require('./testeDeApi')
 postUsuarios: require('./controllerCriaUsuario'),
 login: require('./controllerLogin'),
   getUsuarios: function(req, res){
