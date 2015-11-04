@@ -4,10 +4,10 @@ var express = require('express')
   , mongoose = require('mongoose')
   , jwt = require('jwt-simple');
 
-  var db = 'mongodb://goreport:goappes@ds045604.mongolab.com:45604/heroku_cb8cxw47';//coloque a url do db aqui
+  var db = 'mongodb://mike:mike@ds045684.mongolab.com:45684/teste';//coloque a url do db aqui
   
   app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+  app.use(bodyParser.json());
   var port = process.env.PORT || 8080;
   var router = express.Router();
   app.use('/api', router);
